@@ -24,7 +24,7 @@ func Validate(mystruct interface{}) (err error) {
 			value_kind := reflect.TypeOf(val).Kind()
 			if type_kind == reflect.Struct || type_kind == reflect.Slice && value_kind != reflect.Slice {
 				err = Validate(val)
-			} else if type_kind != reflect.Map || type_kind != reflect.Array {
+			} else if true {
 				err = validateTags(field.Field(i), val)
 			}
 			if err != nil {
